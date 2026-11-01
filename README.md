@@ -6,6 +6,32 @@ An offline log sanitizer with a CLI, checkbox settings TUI, local paste-and-copy
 
 > Early release: detection is best effort. Review sanitized output before sharing. A result with zero findings does not prove that a log contains no secrets.
 
+## Screenshots
+
+### Local GUI
+
+Paste logs, select redaction categories, and review the sanitized output before copying. This screenshot uses synthetic data only.
+
+![PurgeLog local GUI showing original and sanitized synthetic logs](docs/screenshots/gui-desktop.png)
+
+<details>
+<summary>Terminal settings</summary>
+
+The settings TUI supports category checkboxes and per-category replacement actions. The image below renders output captured from a live `purgelog settings` terminal session.
+
+![PurgeLog terminal settings with email masking selected](docs/screenshots/tui-settings.png)
+
+</details>
+
+<details>
+<summary>Mobile browser layout</summary>
+
+The same local GUI adapts to narrow browser windows.
+
+<img src="docs/screenshots/gui-mobile.png" alt="PurgeLog local GUI in a narrow browser viewport" width="390">
+
+</details>
+
 ## Install
 
 Requires Node.js 22 or later. Version `0.1.0` is available on [npm](https://www.npmjs.com/package/purgelog).

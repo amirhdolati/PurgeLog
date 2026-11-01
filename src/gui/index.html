@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PurgeLog — Offline log redaction</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+  <header><a class="brand" href="./">PurgeLog<span> / local workspace</span></a><span class="badge">OFFLINE · NO UPLOADS</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">SHARE THE BUG. KEEP THE SECRETS.</p><h1>Redact secrets.<br><span>Keep the context.</span></h1><p>Paste a log, choose what to hide, and review the result. Processing happens in this browser. Nothing is saved automatically.</p></section>
+    <div class="workspace">
+      <aside><h2>Redaction settings</h2><p class="muted">Choose the information to remove.</p><div id="categories"></div>
+        <label class="field">Default replacement<select id="action"><option value="label">Stable labels &lt;EMAILS_1&gt;</option><option value="mask">Fixed stars ********</option><option value="remove">Empty value</option><option value="replace">Custom text</option></select></label>
+        <label class="field" id="replacement-field" hidden>Replacement text<input id="replacement" value="[REDACTED]" maxlength="256"></label>
+        <label class="field">Settings JSON<input type="file" id="config-file" accept=".json,application/json"></label>
+        <label class="field">Private credentials JSON<input type="file" id="secrets-file" accept=".json,application/json"></label>
+        <p id="credential-status" class="muted">No custom credentials loaded.</p>
+        <button id="export-settings" class="secondary">Export settings</button>
+      </aside>
+      <section class="editor"><div class="panel-head"><label for="input">Original log</label><label class="file-button">Open log<input id="log-file" type="file" hidden></label></div><textarea id="input" spellcheck="false" autocomplete="off" placeholder="Paste logs here. Your input stays on this device."></textarea><div class="panel-foot"><span id="input-count">0 characters</span><button id="sanitize">Redact log →</button></div></section>
+      <section class="editor"><div class="panel-head"><label for="output">Sanitized output</label><span id="result-state" class="muted">Awaiting input</span></div><textarea id="output" readonly spellcheck="false" placeholder="Review the sanitized output here before sharing."></textarea><div class="panel-foot"><button id="copy" class="secondary" disabled>Copy output</button><button id="download" class="secondary" disabled>Download</button></div></section>
+    </div>
+    <section class="review"><div><h2>Review summary</h2><p id="summary">No log processed yet.</p><p id="status" role="status" aria-live="polite"></p></div><button id="clear" class="secondary">Clear logs &amp; credentials</button></section>
+    <footer>Detection is best effort. Review output before sharing. IP addresses and phone detection are off by default. Maximum input: 10 MiB.</footer>
+  </main><script type="module" src="./app.js"></script>
+</body></html>

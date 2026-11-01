@@ -1,0 +1,14 @@
+{
+  "name": "purgelog",
+  "version": "0.1.0",
+  "description": "Redact secrets. Keep the context. Offline log sanitization for the terminal and browser.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "bin": { "purgelog": "./bin/purgelog.js" },
+  "exports": { ".": { "types": "./src/core/index.d.ts", "default": "./src/core/index.js" } },
+  "files": ["bin", "src", "README.md", "SECURITY.md", "LICENSE", "examples"],
+  "scripts": { "test": "node --test", "start": "node bin/purgelog.js", "gui": "node bin/purgelog.js gui --no-open" },
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/amirhdolati/PurgeLog.git" },
+  "keywords": ["logs", "redaction", "privacy", "offline", "cli", "secrets"]
+}

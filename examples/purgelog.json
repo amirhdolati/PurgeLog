@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "action": "label",
+  "categories": {
+    "emails": { "enabled": true, "action": "mask" },
+    "phones": { "enabled": false },
+    "ipAddresses": { "enabled": false }
+  },
+  "sensitiveKeys": ["customer_mobile", "internal_api_key"]
+}

@@ -1,0 +1,6 @@
+node_modules/
+*.tgz
+coverage/
+purgelog.secrets.json
+*.local.json
+.DS_Store

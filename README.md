@@ -8,7 +8,14 @@ An offline log sanitizer with a CLI, checkbox settings TUI, local paste-and-copy
 
 ## Install
 
-Requires Node.js 22 or later. This repository is not yet published on npm; package name availability is not confirmed.
+Requires Node.js 22 or later. The initial `0.1.0` release has been submitted to the public npm registry. Newly published packages may take a few minutes to finish processing.
+
+```sh
+npm install --global purgelog@0.1.0
+purgelog --help
+```
+
+To install directly from source:
 
 ```sh
 git clone https://github.com/amirhdolati/PurgeLog.git
@@ -106,7 +113,10 @@ Valid JSON and valid object/array records in JSON Lines are processed structural
 ## Library
 
 ```sh
-# From another local project, before npm publication:
+# From another project:
+npm install purgelog@0.1.0
+
+# Or install a local checkout:
 npm install /absolute/path/to/PurgeLog
 ```
 
